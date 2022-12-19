@@ -3,8 +3,8 @@ class Attractor {
   constructor() {
     this.position = createVector(width / 2, height / 2);
     this.mass = 20;
-    this.G = 1;
-    this.dragOffset = createVector(0, 0);
+    this.G = 0.8;
+    this.dragOffset = createVector(50, 100);
     this.dragging = false;
     this.rollover = false;
   }
