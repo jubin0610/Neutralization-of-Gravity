@@ -15,4 +15,8 @@ function draw() {
 
   ball.update();
   ball.show();
+  
+   if (mouseIsPressed) {
+     background(0);
+  }
 }
