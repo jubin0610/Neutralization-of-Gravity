@@ -30,7 +30,7 @@ function draw() {
   ball.show();
   
   if (mouseIsPressed) {
-    background (0);
+    background (random(0,100));
     attractor.display();
 
   for (let i = 0; i < movers.length; i++) {
