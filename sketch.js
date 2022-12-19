@@ -1,14 +1,14 @@
 let ball;
 
 function setup() {
-  createCanvas(400, 200);
+  createCanvas(600, 400);
 
   ball = new Particle();
 }
 
 
 function draw() {
-  background(220);
+  background('rgb(153,204,204)');
 
   let gravity = createVector(0, 0.1);
   ball.addForce(gravity);
