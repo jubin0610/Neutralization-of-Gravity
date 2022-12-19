@@ -18,6 +18,10 @@ class Particle {
     this.pos.add(this.vel);
 
     this.acc.set(0, 0);
+    
+         if (mouseIsPressed) {
+    this.c = color(255); 
+  }
   }
 
 
