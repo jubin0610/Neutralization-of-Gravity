@@ -4,8 +4,8 @@ class Particle {
     this.vel = createVector(0, 0);
     this.acc = createVector(0, 0);
 
-    this.c = color(0);
-    this.w = 50;
+    this.c = color('rgb(102,153,104)');
+    this.w = 28;
   }
 
   addForce(aForce) {
