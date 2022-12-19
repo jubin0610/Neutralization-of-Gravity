@@ -1,13 +1,18 @@
 class Particle {
   constructor() {
-    this.pos = createVector(width/2, height/2);
-    this.vel = createVector(0, 0);
-    this.acc = createVector(0, 0);
-
-    this.c = color('rgb(102,153,104)');
-    this.w = 28;
+    this.pos = createVector(random(0, width), random(0, height));
+    this.vel = createVector(0, random(-1, 0));
+    this.acc = createVector(0, 0.05);
+    this.c = color(random(255,150,50));
+    this.w = random(15);
+    this.lifespan = 255;
   }
 
+  run() {
+    this.update();
+    this.show();
+  
+  }
   addForce(aForce) {
     this.acc.add(aForce);
   }
@@ -16,19 +21,14 @@ class Particle {
     this.checkEdge();
     this.vel.add(this.acc);
     this.pos.add(this.vel);
-
     this.acc.set(0, 0);
-    
-    if (mouseIsPressed) {
-    background (0);
-    this.c = color(255); 
-  }
+    this.lifespan -= 2;
   }
 
 
   checkEdge() {
     if (this.pos.y > height) {
-      this.vel.y = this.vel.y * -0.8;
+      this.vel.y = this.vel.y * -1;
       this.pos.y = height;
     }
     
@@ -39,7 +39,12 @@ class Particle {
 
 
   show() {
+    noStroke();
     fill(this.c);
     ellipse(this.pos.x, this.pos.y, this.w, this.w);
+  }
+  
+  isDead() {
+    return this.lifespan < 0;
   }
 }
