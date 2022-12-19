@@ -1,11 +1,11 @@
 class Particle {
   constructor() {
     this.pos = createVector(random(0, width), random(0, height));
-    this.vel = createVector(0, random(-1, 0));
-    this.acc = createVector(0, 0.05);
-    this.c = color(random(255,150,50));
-    this.w = random(15);
-    this.lifespan = 255;
+    this.vel = createVector(0, random(-4, 5));
+    this.acc = createVector(0, 0.5);
+    this.c = color(random(255,170,50));
+    this.w = random(30);
+    this.lifespan = 180;
   }
 
   run() {
