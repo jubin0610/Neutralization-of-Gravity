@@ -19,7 +19,8 @@ class Particle {
 
     this.acc.set(0, 0);
     
-         if (mouseIsPressed) {
+    if (mouseIsPressed) {
+    background (0);
     this.c = color(255); 
   }
   }
