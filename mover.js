@@ -19,9 +19,9 @@ class Mover {
 
   display() {
     stroke(0);
-    strokeWeight(2);
-    fill(255, 175);
-    ellipse(this.position.x, this.position.y, this.mass * 16, this.mass * 16);
+    strokeWeight(0.1);
+    fill(255, 180);
+    ellipse(this.position.x, this.position.y, this.mass * 20, this.mass * 20);
   }
 
   checkEdges() {
