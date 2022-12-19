@@ -18,7 +18,7 @@ function setup() {
 
 
 function draw() {
-  background('rgb(153,204,204)');
+  background(122,187,219);
   
   system.addParticle();
   system.run();
